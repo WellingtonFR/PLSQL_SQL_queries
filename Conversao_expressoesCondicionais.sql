@@ -1,4 +1,5 @@
 -- Utilizando a Função TO_CHAR com Datas
+--to_char converte em string
 SELECT
   last_name,
   TO_CHAR(hire_date, 'DD/MM/YYYY  HH24:MI:SS') DT_ADMISSÃO
@@ -39,12 +40,14 @@ FROM
   employees;
 
 -- Utilizando a Função TO_NUMBER
+--to_number converte em números
 SELECT
   TO_NUMBER('12000,50')
 FROM
   dual;
 
 -- Utilizando a Função TO_DATE
+--to_date converte em datas
 SELECT
   TO_DATE('06/02/2020', 'DD/MM/YYYY') DATA
 FROM
@@ -60,6 +63,7 @@ WHERE
   hire_date = TO_DATE('17/06/2003', 'DD/MM/YYYY');
 
 -- Utilizando Funções Aninhadas
+--round arredonda os valores
 SELECT
   first_name,
   last_name,
@@ -70,6 +74,7 @@ WHERE
   hire_date = TO_DATE('17/06/2003', 'DD/MM/YYYY');
 
 -- Utilizando a Função NVL
+--nvl se o valor for nulo substitui pela segunda expressão
 SELECT
   last_name,
   salary,
@@ -80,6 +85,7 @@ FROM
   employees;
 
 -- Utilizando a Função COALESCE
+--coalesce pega o primeiro valor não nulo
 SELECT
   COALESCE(NULL, NULL, 'ExpresssÃo 3'),
   COALESCE(NULL, 'ExpressÃo 2', 'ExpresssÃo 3'),
@@ -101,6 +107,7 @@ FROM
   employees;
 
 -- Utilizando a Função NVL2
+--nlv2 funciona como um if, se o valor for nulo usa a segunda expressão, senão usa a primeira
 SELECT
   last_name,
   salary,
